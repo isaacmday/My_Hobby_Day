@@ -8,6 +8,11 @@
 })*/
 
 $("#btnSubmit").on("click", function () {
-    var chargeAmount = $("#numHours").val() * 20;
-    $("#output").text("Your quote is $" + chargeAmount + ".");
+    if ($("#numHours").val() > 0) {
+        var chargeAmount = $("#numHours").val() * 20;
+        $("#output").text("Your quote is $" + chargeAmount + ".");
+    }
+    else {
+        alert("Please enter a positive number.");
+    }
 })
